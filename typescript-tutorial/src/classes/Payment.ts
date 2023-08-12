@@ -2,7 +2,7 @@ import { HasFormatter } from "../interfaces/Hasformatter"
 
 // lesson 12 - classes
 // All classes are public by defualt. its the default behaivour
-export class Invoice implements HasFormatter {
+export class Payment implements HasFormatter {
   //   client: string
 
   // lesson 13 - Public, private and readonly
@@ -20,12 +20,12 @@ export class Invoice implements HasFormatter {
 
   // lesson 14 - Invoice
   constructor(
-    readonly client: string,
+    readonly recipient: string,
     private details: string,
     public amount: number
   ) {}
 
   format() {
-    return `${this.client} owes N${this.amount} for ${this.details}`
+    return `${this.recipient} owes N${this.amount} for ${this.details}`
   }
 }
